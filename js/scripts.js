@@ -33,8 +33,8 @@ var leapYear = function(year) {
     var year = parseInt($("input#year").val());
     var result = leapYear(year);
 
-    if(year && year >0) {
-
+    if(year && !isNaN(year) && year > 0) {
+      
       if (!result) { // same as writing if (result === false)
         $(".not").text("not");
       } else {
