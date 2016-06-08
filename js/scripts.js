@@ -3,7 +3,19 @@
 //For words that start with "y", treat the "y" as a consonant.
 
 // Pig Latin Business (or back-end) logic:
+var vowels = ["a", "e", "i", "o", "u"];
+var result = [];
 
+var firstLetterVowel = function (wordArray) {
+  for (var i=0; i<vowels.length; i++) {
+    if (wordArray[0] === vowels[i]) {
+      // wordArray.push(wordArray.shift());
+      wordArray.push("a", "y");
+      result = wordArray.join("");
+    }
+  }
+
+};
 
 
 
@@ -15,11 +27,12 @@ $(document).ready(function() {
 
   $("form#pig-latin-form").submit(function(event) {
     event.preventDefault();
-    var result;
+
     var userInput = $("#pig-latin-input").val();
+    var userInputArray = userInput.split("");
+    firstLetterVowel(userInputArray);
 
     $(".pig-latin-result").text(result);
-
 
     $("#pig-latin-result").show();
   });
