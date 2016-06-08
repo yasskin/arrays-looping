@@ -35,18 +35,30 @@ _Pig Latin Specifications
 The program should add "ay" to words that begin with a vowel.
   Example Input: animal
   Example Output: animalay
+The program should treat 'y' as a consonant, moving the y to the end of the word and then adding an "ay".
+  Example: yes
+  Example Output: esyay
 For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
   Example Input: cat
   Example Output: atcay
-Additional Specification One
-  Example Input:
-  Example Output:
-Additional Specification Two
-  Example Input:
-  Example Output:
-Additional Specification Three
-    Example Input:
-    Example Output:
+For words that begin with two consonants, the program should move both consonants to the end and add "ay".
+  Example Input: step
+  Example Output: epstay
+For words that begin with three consonants, the program should move all three consonants to the end and add "ay".  
+  Example Input: street
+  Example Output: eetstray
+For would that start with qu, move both the "q" and the "u" to the end and add "ay"
+    Example Input: quit
+    Example Output: itquay
+The program should validate the characters are alphabetic.
+  Example Input: 3 pigs
+  Example Output: false / error
+The program should keep capitalization in place
+    Example Input: Hello piggies
+    Example Output: Ellohay iggiespay
+The program should keep punctuation in place
+  Example Input: Three pigs, really!
+  Example Output: Eethray igspay, eallyray!
 
 ## Setup/Installation Requirements
 
