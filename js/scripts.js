@@ -3,18 +3,26 @@
 //For words that start with "y", treat the "y" as a consonant.
 
 // Pig Latin Business (or back-end) logic:
+
+
+
+
+
+
+// Pig Latin User interface (or front-end) logic:
+
 $(document).ready(function() {
 
   $("form#pig-latin-form").submit(function(event) {
     event.preventDefault();
-    $("pig-latin-result").text(result);
+    var result;
+    var userInput = $("#pig-latin-input").val();
+
+    $(".pig-latin-result").text(result);
 
 
-  $("pig-latin-result").show();
+    $("#pig-latin-result").show();
   });
-
-
-// Pig Latin User interface (or front-end) logic:
 
 
 // Leap Year Business (or back-end) logic:
