@@ -5,9 +5,10 @@
 // For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
 
 // Pig Latin Business (or back-end) logic:
-var result;
+var result = [];
 
 var wordTranslator = function(word) {
+
   var wordArray = word.split("");
 
   if (wordArray[0] === "q" && wordArray[1] === "u") {
@@ -31,7 +32,15 @@ var wordTranslator = function(word) {
   }
 //all words get this treatment
     wordArray.push("ay");
-    result = wordArray.join("");
+    result.push(wordArray.join(""));
+};
+
+var multiWord = function(word){
+  var multiWordArray =  word.split(" ");
+  for (i=0; i<multiWordArray.length; i++) {
+    wordTranslator(multiWordArray[i]);
+  }
+  result.join(" ");
 };
 
 // Pig Latin User interface (or front-end) logic:
@@ -41,7 +50,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = $("#pig-latin-input").val();
-    wordTranslator(userInput);
+    multiWord(userInput);
 
     $(".pig-latin-result").text(result);
 
