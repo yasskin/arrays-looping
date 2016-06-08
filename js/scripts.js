@@ -1,36 +1,20 @@
 // For words that start with a vowel, add "ay" to the end.
 // For words that start with one or more consonants, move all of the first consecutive consonants to the end and add "ay". (If the first consonants include // "qu", move the "u" along with the "q". Don't forget about words like "squeal" where the "qu" doesn't come first!)
 //For words that start with "y", treat the "y" as a consonant.
+// For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
 
 // Pig Latin Business (or back-end) logic:
-var vowels = ["a", "e", "i", "o", "u"];
-var result = [];
+var result;
 
-var firstLetterVowel = function (wordArray) {
-  for (var i=0; i < vowels.length; i++) {
-    if (wordArray[0] === vowels[i]) {
-      return true;
-    }; // firstLetterVowel is falsy if true is not returned
-  };
-};
+var wordTranslator = function(word) {
+  var wordArray = word.split("");
 
-var wordTranslator = function (wordArray) {
-  if (firstLetterVowel(wordArray) === true) {
-    console.log("vowel = true");
-    wordArray.push("a", "y");
-    result = wordArray.join("");
-  } else {
-    console.log("vowel = false");
+  if (wordArray[0] != "a" && wordArray[0] != "e" && wordArray[0] != "i" && wordArray[0] != "o" && wordArray[0] != "u") {
     wordArray.push(wordArray.shift());
-    wordArray.push("a", "y");
+  }
+    wordArray.push("ay");
     result = wordArray.join("");
-  };
-
-}; // For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
-
-
-
-
+};
 
 
 // Pig Latin User interface (or front-end) logic:
@@ -41,8 +25,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userInput = $("#pig-latin-input").val();
-    var userInputArray = userInput.split("");
-    wordTranslator(userInputArray);
+    wordTranslator(userInput);
 
     $(".pig-latin-result").text(result);
 
