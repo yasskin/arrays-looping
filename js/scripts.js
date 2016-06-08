@@ -30,11 +30,12 @@ var leapYear = function(year) {
 
   $("form#leap-year").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
+    var year = $("input#year").val();
+    year = parseInt(year);
     var result = leapYear(year);
 
     if(year && !isNaN(year) && year > 0) {
-      
+
       if (!result) { // same as writing if (result === false)
         $(".not").text("not");
       } else {
