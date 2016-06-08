@@ -5,7 +5,7 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Leap year detector</title>
+    <title>Pig Latin Translator</title>
   </head>
   <body>
     <div class="container">
@@ -14,25 +14,24 @@
       </div>
       <ul class="nav nav-tabs" role="tablist">
         <li role="presentation"><a href="index.html">Home</a></li>
-        <li role="presentation" class="active"><a href="leap-year.html">Leap Year</a></li>
-        <li role="presentation"><a href="pig-latin.html">Pig Latin</a></li>
+        <li role="presentation"><a href="leap-year.html">Leap Year</a></li>
+        <li role="presentation" class="active"><a href="pig-latin.html">Pig Latin</a></li>
         <li role="presentation"><a href="bases.html">Bases</a></li>
         <li role="presentation"><a href="README.md">ReadMe</a></li>
       </ul>
+      <h1>Pig Latin Translator: igPay atinLay anslatorTray</h1>
 
-      <h1>Leap year detector</h1>
-
-      <form id="leap-year">
+      <form id="pig-latin-form">
         <div class="form-group">
-          <label for="year">Enter a year and find out if it's a leap year:</label>
-          <input id="year" type="text">
+          <label for="pig-latin-input-label">Enter some words, press <strong>"Translate!"</strong>), and read it in Pig Latin:</label>
+          <input id="pig-latin-input" type="text">
         </div>
 
-        <button type="submit" class="btn">Find out!</button>
+        <button type="submit" class="btn">Translate!</button>
       </form>
 
-      <div id="result">
-        <p><span class="year"></span> is <span class="not"></span> a leap year.</p>
+      <div id="pig-latin-result">
+        <p><span></span></p>
       </div>
     </div>
   </body>

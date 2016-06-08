@@ -1,8 +1,16 @@
-# _{Application Name}_
+# H1 Arrays & Looping
 
-#### _{Brief description of application}, {Date of current version}_
+<a href="index.html">Home</a>
+<a href="leap-year.html">Leap Year
+<a href="pig-latin.html">Pig Latin
+<a href="bases.html">Bases</a>
+<a href="README.md">ReadMe</a>
 
-#### By _**Noah Yasskin and **_
+# _Simple Arrays & Looping Applications_
+
+#### _Arrays and Looping Applications: Leap Year, Pig Latin, June 8, 2016 _
+
+#### By _**Noah Yasskin and Stephanie**_
 
 ## Description
 
@@ -12,19 +20,35 @@ _Behavior                          Input Output_
 _a year that is not a leap year     1993  false_
 _a year that is divisible by 100    1900  false_
 _a year that is divisible by 4      2004  true_
-_a year that is divisible by 400    2000  true_ 
+_a year that is divisible by 400    2000  true_
+_a blank string                     "  "  false_
+_words                              six   false_
+_negative numbers                   -4    false_
+
 
 _It is modeled on the calculator at http://epicodus-lessons.github.io/leap-year/_
 
+_Pig Latin Specifications
+
+The program should add "ay" to words that begin with a vowel.
+  Example Input: animal
+  Example Output: animalay
+For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
+  Example Input: cat
+  Example Output: atcay
+Additional Specification One
+  Example Input:
+  Example Output:
+Additional Specification Two
+  Example Input:
+  Example Output:
+Additional Specification Three
+    Example Input:
+    Example Output:
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _These applications run in most web browsers that support JavaScript_
 
 ## Known Bugs
 
@@ -32,7 +56,7 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you run into any issues or have questions, ideas or concerns. we encourage you to contact us on GitHub or make a contribution to the code._
 
 ## Technologies Used
 
