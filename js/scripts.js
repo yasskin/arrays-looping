@@ -33,14 +33,20 @@ var leapYear = function(year) {
     var year = parseInt($("input#year").val());
     var result = leapYear(year);
 
-    $(".year").text(year);
+    if(year){
 
-    if (!result) { // same as writing if (result === false)
-      $(".not").text("not");
+      if (!result) { // same as writing if (result === false)
+        $(".not").text("not");
+      } else {
+        $(".not").text("");
+      }
+
+      $(".year").text(year);
+      $("#result").show();
+
     } else {
-      $(".not").text("");
+      alert("Please enter a year.");
     }
 
-    $("#result").show();
   });
 });
