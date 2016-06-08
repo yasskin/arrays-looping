@@ -7,15 +7,27 @@ var vowels = ["a", "e", "i", "o", "u"];
 var result = [];
 
 var firstLetterVowel = function (wordArray) {
-  for (var i=0; i<vowels.length; i++) {
+  for (var i=0; i < vowels.length; i++) {
     if (wordArray[0] === vowels[i]) {
-      // wordArray.push(wordArray.shift());
-      wordArray.push("a", "y");
-      result = wordArray.join("");
-    }
-  }
-
+      return true;
+    }; // firstLetterVowel is falsy if true is not returned
+  };
 };
+
+var wordTranslator = function (wordArray) {
+  if (firstLetterVowel(wordArray) === true) {
+    console.log("vowel = true");
+    wordArray.push("a", "y");
+    result = wordArray.join("");
+  } else {
+    console.log("vowel = false");
+    wordArray.push(wordArray.shift());
+    wordArray.push("a", "y");
+    result = wordArray.join("");
+  };
+
+}; // For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
+
 
 
 
@@ -30,7 +42,7 @@ $(document).ready(function() {
 
     var userInput = $("#pig-latin-input").val();
     var userInputArray = userInput.split("");
-    firstLetterVowel(userInputArray);
+    wordTranslator(userInputArray);
 
     $(".pig-latin-result").text(result);
 
