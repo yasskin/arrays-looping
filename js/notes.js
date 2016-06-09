@@ -1,3 +1,9 @@
+// Refactoring
+
+
+
+//
+
 var vowels = ["a", "e", "i", "o", "u"];
 var result = [];
 
