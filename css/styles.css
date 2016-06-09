@@ -10,6 +10,10 @@ h1 {
   display: none;
 }
 
+#roman-numeral-result {
+  display: none;
+}
+
 .btn {
   margin-bottom: 20px;
 }

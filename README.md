@@ -14,6 +14,20 @@
 
 ## Description
 
+Behavior                              | Input  | Output
+------------------------------------- | ------ | ------
+Convert numbers into Roman numerals | 1, 1000 | I, M
+Add the value of all the symbols | 2 | II
+Ensure there are not three of the same character in a row | IIII | false
+Subtract one character if there are 3 characters | IIII, LXXXX | III, LXXX
+Switch to subtracting the first roman numeral IIII, LXXXX | IV, XC
+Separate ones | 9 | IX
+Separate tens| 99 | XCIX
+Separate hundreds | 999 | CMXCIX
+Separate thousands | 3999 | MMMCMXCIX
+Cannot count higher than 3999 | x >= 4000 | false
+
+
 _This is a Leap Year calculator._
 _Specifications (BDD)_
 _Behavior                          Input Output_

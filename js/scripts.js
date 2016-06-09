@@ -1,3 +1,35 @@
+//ROMAN NUMERALS
+
+// Roman Numerals Business (or back-end) logic:
+var ratioResult;
+var ratioArray = [ ];
+
+ratioValue (function(ratio) {
+
+  if (userInput = "1") {
+
+ }
+});
+
+// Roman Numerals User Interface (or front-end) logic:
+var userInput;
+
+$(document).ready(function() {
+
+  $("form#roman-numeral-form").submit(function(event) {
+    event.preventDefault();
+
+    userInput = $("#roman-numeral-input").val();
+    ratioValue(userInput);
+
+    $("#roman-numeral-result").text(ratioResult);
+    $("#roman-numeral-result").show();
+  });
+
+});
+
+//PIG LATIN
+
 // For words that start with a vowel, add "ay" to the end.
 // For words that start with one or more consonants, move all of the first consecutive consonants to the end and add "ay".
 // (If the first consonants include // "qu", move the "u" along with the "q". Don't forget about words like "squeal" where the "qu" doesn't come first!)
@@ -5,7 +37,8 @@
 // For words that begin with a single consonant, the program should move the first consonant to the end of the word, then add "ay".
 
 // Pig Latin Business (or back-end) logic:
-var result = [];
+var result = [ ];
+var wordArray = [ ];
 
 var wordTranslator = function(word) {
 
@@ -44,12 +77,14 @@ var multiWord = function(word){
 };
 
 // Pig Latin User interface (or front-end) logic:
+var userInput;
+
 $(document).ready(function() {
 
   $("form#pig-latin-form").submit(function(event) {
     event.preventDefault();
 
-    var userInput = $("#pig-latin-input").val();
+    userInput = $("#pig-latin-input").val();
     multiWord(userInput);
 
     $(".pig-latin-result").text(result);
