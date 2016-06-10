@@ -7,8 +7,8 @@ var arrayArabicNumbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 var ratioRomanator = function(userInputX) {
 
 //finds the highest decimal value V that is less than or equal to the decimal number X (userInputX)
-  var decimalNumberX = userInputX;
-  var arrayRomanNumeralN = [ ];
+var decimalNumberX = userInputX;
+var arrayRomanNumeralN = [ ];
 
   while (decimalNumberX > 0) {
 
@@ -38,51 +38,40 @@ var ratioRomanator = function(userInputX) {
     }
     else if (decimalNumberX <= 89) {
       romanNumeralN = "L";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 50;
     }
     else if (decimalNumberX <= 90) {
       romanNumeralN = "XC";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 90;
     }
-    else if (decimalNumberX <= 400) {
+    else if (decimalNumberX <= 399) {
       romanNumeralN = "C";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 100;
     }
     else if (decimalNumberX <= 400) {
       romanNumeralN = "CD";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 400;
     }
     else if (decimalNumberX <= 899) {
       romanNumeralN = "D";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 500;
     }
     else if (decimalNumberX <= 900) {
       romanNumeralN = "CM";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 900;
     }
     else if (decimalNumberX <= 3999) {
       romanNumeralN = "M";
-      decimalNumberX = decimalNumberX - 40;
+      decimalNumberX = decimalNumberX - 1000;
     }
     else {decimalNumberX <= 4000
       alert("Don't you know Romans can't count above 3999!");
       break;
     }
-
     arrayRomanNumeralN.push(romanNumeralN);
-
-    console.log(romanNumeralN);
-    console.log(decimalNumberX);
-
-
   };
-  //write the Roman numeral n
-
   return arrayRomanNumeralN.join("");
-  console.log(arrayRomanNumeralN);
-  console.log(ratioResult);
 };
-
 
 // Roman Numerals User Interface (or front-end) logic:
 var userInput; // string
